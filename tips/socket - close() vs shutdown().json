@@ -1,0 +1,4 @@
+{
+    "title":"socket - close() vs shutdown()",
+    "content":"<ul><li>close() 关闭socket的发送和接收，不可控<br>shutdown() 可控制只停止发送或接收其中之一，也可以全部停止</li><br><li>shutdown()只把socket置为不可用，不影响描述的引用计数，要释放资源，需要使用close()<br>\t 原文：shutdown() doesn't actually close the file descriptor—it just changes its usability. To free a socket descriptor, you need to use close()<a href=http://beej.us/guide/bgnet/output/html/multipage/syscalls.html#closedown>-- by Beej's Guide to Network Programming</a></li></ul>"
+}
