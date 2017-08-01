@@ -27,7 +27,8 @@
             // TODO : manually modify this array to add or delete tips's json files
             var _jsonFiles =
             [
-                "socket - close() vs shutdown().json"
+                "socket - close() vs shutdown().json",
+                "C++ smart pointer.json"
             ];
 
             function getTips()
@@ -38,7 +39,8 @@
                 _tips = [];
                 for(var i=0; i<_jsonFiles.length; i++)
                 {
-                    $.getJSON(tips_url + _jsonFiles[i], function (data) {
+                    var url = encodeURI(tips_url + _jsonFiles[i]);
+                    $.getJSON(url, function (data) {
                         _tips.push(data);
                         var idx = _tips.length - 1;
                         // set button title and content
@@ -64,6 +66,7 @@
             {
                 // create buttons
                 _btns = [];
+                console.log(_jsonFiles.length)
                 for(var i=0; i<_jsonFiles.length; i++)
                 {
                     var btn = document.createElement("item"+i);
