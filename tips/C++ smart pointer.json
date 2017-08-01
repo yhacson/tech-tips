@@ -1,0 +1,4 @@
+{
+    "title":"C++ 智能指针",
+    "content":"<ul><li><s>auto_ptr </s><p>独占所有权，当对auto_ptr进行赋值操作时，被复制的auto_ptr资源所有权会被转移到新的auto_ptr里面。</p><p>※从C++11开始，auto_ptr已被弃用，C++11标准引入了boost的shared_ptr来替代</p></li><li>shared_ptr </li><p>引用计数机制，共享资源所有权，允许多个shared_ptr指向同一个对象。</p><li>weak_ptr</li><p>可以从shared_ptr或weak_ptr进行构造，构造和析构都不会引起引用计数变化，通常用来配合shared_ptr来实现互相引用。</p><li><s>scoped_ptr</s></li><p>标准里没有引入boost的scoped_ptr</p></ul>"
+}
